@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion '28.0.3'
+
+    defaultConfig {
+        applicationId "com.orane.icliniqlite"
+        minSdkVersion 19
+        targetSdkVersion 30
+        versionCode 11
+        versionName "1.0.10"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", 'arm64-v8a', "x86_64", "mips"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-messaging:17.3.4'
+
+    implementation 'com.github.ksoichiro:android-observablescrollview:1.5.2'
+    implementation 'de.hdodenhof:circleimageview:1.2.1'
+
+    implementation 'com.flurry.android:analytics:10.0.0'
+    implementation 'me.drakeet.materialdialog:library:1.2.8'
+
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+    //implementation 'com.gordonwong:material-sheet-fab:1.2.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'com.alexvasilkov:gesture-views:2.1.1'
+    //implementation 'com.pubnub:pubnub-android:3.7.5'
+    implementation 'androidx.multidex:multidex:2.0.0'
+    //implementation 'com.allattentionhere:fabulousfilter:0.0.2' //fabulasw
+    implementation 'com.razorpay:checkout:1.5.12'
+
+    //implementation 'com.github.armcha:AutoLinkTextView:0.3.0'
+
+    implementation 'com.wdullaer:materialdatetimepicker:2.1.1'
+    //implementation 'com.github.armcha:AutoLinkTextView:0.3.0'
+    //implementation 'com.davemorrissey.labs:subsampling-scale-image-view:3.9.0'
+    implementation 'com.stripe:stripe-android:8.1.0'
+    implementation 'com.github.tajchert:nammu:1.1.1'
+
+    //implementation 'com.mindorks.android:prdownloader:0.4.0' //Attachment Download
+    //implementation 'com.github.barteksc:android-pdf-viewer:2.8.2' //PDF Viewer
+    implementation 'com.obsez.android.lib.filechooser:filechooser:1.1.10'
+    implementation 'com.hbb20:ccp:2.2.2' //Country code picker
+
+    implementation 'com.daimajia.easing:library:2.0@aar'  // Logo Animation
+    implementation 'com.daimajia.androidanimations:library:2.3@aar' // Logo Animation
+
+    implementation 'com.google.api-client:google-api-client:1.20.0'
+    implementation 'com.google.api-client:google-api-client-android:1.20.0'
+    implementation 'com.google.api-client:google-api-client-gson:1.20.0'
+    implementation 'com.google.apis:google-api-services-calendar:v3-rev125-1.20.0'
+
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+}

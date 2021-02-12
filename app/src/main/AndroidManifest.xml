@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.orane.icliniqlite">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.STORAGE" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/newlitelogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/logo" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="channel_number" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <!--
+
+                <meta-data
+                    android:name="com.google.firebase.messaging.default_notification_icon"
+                    android:resource="@mipmap/logo" />
+
+                <meta-data
+                    android:name="com.google.firebase.messaging.default_notification_color"
+                    android:resource="@color/app_color" />
+        -->
+
+        <!--      <service android:name=".MyFirebaseInstanceIDService">
+                  <intent-filter>
+                      <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+                  </intent-filter>
+              </service>
+
+              <service android:name=".MyFirebaseMessagingService">
+                  <intent-filter>
+                      <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                  </intent-filter>
+              </service>-->
+
+        <provider
+            android:name=".fileattach_library.ExtendedFileProvider"
+            android:authorities="${applicationId}.easyphotopicker.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+
+        </provider>
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="Kdid-IfMS7M48LTEZCTgRKFIoaJPt-gCcOqbgUy8cIDlegzCuRuJn7bZiwzauenU1a4i40rgJ2PykN9bp1vZ8U" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity
+            android:name=".Articles_List_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ratting_activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ExpandableActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Offers_view"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Comments_ListActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Offers_List_activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArticleViewActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Lite_Home_Activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Patient_Profile_Activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Prescriptions_Activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Prescription_Entry_Activity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Prescription_WebViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".SomeoneEdit_Dialog"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".WebViewActivity_Persona"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Attachment_Screen_Activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".OTPActivity_PromoCode"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".FamilyProfileListActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".SettingsActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".Attachment_WebViewActivity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".Image_Preview"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".Ask_FamilyProfile"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Invoice_Page_New"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Stripewebview_Activity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Attached_List_Activity"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".attachment_view.GridViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".CommonActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".QueryActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ForgotPwdActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".OTPSignupActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".OTPActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".File_Upload_Screen"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".ThankyouActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".UploadToHotlineServer"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".HotlineChatViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".FileChooserBookingActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".UploadBookingToServer"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".TimeZoneActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".QueryViewActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".FileChooserActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Instant_Chat"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity
+            android:name=".SpecialityListActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WebViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AskQuery1"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".AskQuery2"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Instant_AskQuery2"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cc53deb84851c3c6ee51f3c400c51e251432482b" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationOpened.DEFAULT"
+            android:value="DISABLE" />
+
+        <activity
+            android:name=".Model.DeepLinkActivityArticles"
+            android:theme="@style/AppTheme.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.icliniq.com"
+                    android:pathPrefix="/articles"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>

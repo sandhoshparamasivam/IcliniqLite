@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "514308465124",
+    "firebase_url": "https://icliniq-lite-patient-app.firebaseio.com",
+    "project_id": "icliniq-lite-patient-app",
+    "storage_bucket": "icliniq-lite-patient-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:514308465124:android:c95f2752dbae7fbe1d67f1",
+        "android_client_info": {
+          "package_name": "com.orane.icliniqlite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "514308465124-ljma41ja6rk1oq89qcf3h3malm2hg3a6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.orane.icliniqlite",
+            "certificate_hash": "b98a01ea67cbfe5dac3dfe02e37cfdc3387dcdde"
+          }
+        },
+        {
+          "client_id": "514308465124-p3dt6d2gfigtkk9906nbdh3kv0scn3ee.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQW3SbVEZtQgJdU9JtypnpTWtGTOGLBnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "514308465124-p3dt6d2gfigtkk9906nbdh3kv0scn3ee.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "514308465124-on0mq34d7nr8o6rm1stfodkufjqa1si0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.orane.icliniqlite",
+                "app_store_id": "1485832596"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
